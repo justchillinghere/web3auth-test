@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web3Auth example</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Web3Auth Example</h1>
+      <!-- Logged In -->
+      <div class="grid btn-logged-in">
+        <button id="get-user-info" class="btn">Get User Info</button>
+        <button id="get-accounts" class="btn">Get Accounts</button>
+        <button id="get-balance" class="btn">Get Balance</button>
+        <button id="get-private-key" class="btn">Get Private Key</button>
+        <button id="sign-message" class="btn">Sign Message</button>
+        <button id="logout" class="btn">Logout</button>
+        <div class="console" id="console">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+
+      <!-- Logged Logout -->
+      <div class="grid btn-logged-out">
+        <button id="login-google" class="btn">Login with Google</button>
+        <div class="email-login-container">
+          <input
+            type="email"
+            id="email-input"
+            placeholder="Enter your email"
+            class="email-input"
+          />
+          <button id="login-email" class="btn">Login with Email</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>

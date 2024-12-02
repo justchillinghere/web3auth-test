@@ -1,0 +1,25 @@
+{
+  "name": "web3auth_test_app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@web3auth/auth-adapter": "^9.4.5",
+    "@web3auth/base": "^9.4.5",
+    "@web3auth/ethereum-provider": "^9.4.5",
+    "@web3auth/modal": "^9.4.5",
+    "@web3auth/no-modal": "^9.4.5",
+    "jquery": "^3.7.1",
+    "web3": "^4.15.0"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "vite": "^4.4.11",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  }
+}
