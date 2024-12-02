@@ -72,19 +72,6 @@ $(document).ready(async function () {
   }
 });
 
-// $("#login").click(async function (event) {
-//   try {
-//     await web3auth.connectTo("auth", {
-//       loginProvider: "google",
-//     });
-//     $(".btn-logged-out").hide();
-//     $(".btn-logged-in").show();
-//     uiConsole("Logged in Successfully!");
-//   } catch (error) {
-//     console.error(error.message);
-//   }
-// });
-
 $("#login-google").click(async function (event) {
   try {
     await loginViaGoogle();
@@ -128,7 +115,6 @@ $("#get-accounts").click(async function (event) {
   try {
     const web3 = new Web3(web3auth.provider);
 
-    // Get user's Ethereum public address
     const address = await web3.eth.getAccounts();
     uiConsole("User address", address);
   } catch (error) {
@@ -140,10 +126,8 @@ $("#get-balance").click(async function (event) {
   try {
     const web3 = new Web3(web3auth.provider);
 
-    // Get user's Ethereum public address
     const address = (await web3.eth.getAccounts())[0];
 
-    // Get user's balance in ether
     const balance = web3.utils.fromWei(
       await web3.eth.getBalance(address), // Balance is in wei
       "ether"
@@ -195,14 +179,6 @@ $("#logout").click(async function (event) {
   }
 });
 
-// function uiConsole(...args) {
-//   const el = document.querySelector("#console>p");
-//   if (el) {
-//     el.innerHTML = JSON.stringify(args || {}, null, 2);
-//     console.log(...args);
-//   }
-// }
-
 function parseJWT(token) {
   try {
     const base64Url = token.split(".")[1];
@@ -225,7 +201,6 @@ function uiConsole(title, data = null, options = {}) {
   const item = document.createElement("div");
   item.className = "console-item";
 
-  // Add title
   const titleEl = document.createElement("h4");
   titleEl.className = "console-title";
   titleEl.textContent = title;

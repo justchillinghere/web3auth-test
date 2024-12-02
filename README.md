@@ -12,7 +12,7 @@ A simple application demonstrating Web3Auth and data it returns.
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:justchillinghere/web3auth-test.git
+git clone https://github.com/justchillinghere/web3auth-test.git
 cd web3auth_test_app
 ```
 
