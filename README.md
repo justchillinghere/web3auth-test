@@ -1,4 +1,3 @@
-````markdown
 # Web3Auth Test App
 
 A simple application demonstrating Web3Auth and data it returns.
@@ -16,7 +15,6 @@ A simple application demonstrating Web3Auth and data it returns.
 git clone <repository-url>
 cd web3auth_test_app
 ```
-````
 
 2. Install dependencies:
 
